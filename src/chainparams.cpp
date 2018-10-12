@@ -54,11 +54,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (1, uint256("0x00000e3e69163d257bff4d912159aa9201690604a335a018f3062cf667b54f12"));
+    (1, uint256("0x00000e3e69163d257bff4d912159aa9201690604a335a018f3062cf667b54f12"))
+    (716, uint256("0x000000000a1b046a1e2139be8e54ef58a3aac62a80354b56d305e672cc4d2b6f"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1538644732, // * UNIX timestamp of last checkpoint block
-    2,          // * total number of transactions between genesis and last checkpoint
+    1539340499, // * UNIX timestamp of last checkpoint block
+    1346,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -93,7 +94,7 @@ public:
          */
         pchMessageStart[0] = 0xae;
         pchMessageStart[1] = 0xb7;
-        pchMessageStart[2] = 0xda;
+        pchMessageStart[2] = 0xaa;
         pchMessageStart[3] = 0x8c;
         vAlertPubKey = ParseHex("04ebb85b73141204eb6c81ac67321062e0916d2d561bf8255ee657f7dc5b11beed91a4c32858e71f150bbc830044451db8ebd1df9a7afb6daa439cce4fc16e3cbd");
         nDefaultPort = 2288;
@@ -106,7 +107,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Tet: 1 day
         nTargetSpacing = 1 * 60;  // Tet: 1 minute
-        nLastPOWBlock = 715;
+        nLastPOWBlock = 720;
         nMaturity = 75;
         nMasternodeCountDrift = 20;
         nMasternodeCollateralLimit = 100000;
